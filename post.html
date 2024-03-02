@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"> </i>Edge</span
+          >Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted by <strong>John Doe</strong> |
+          January 16th 2024
+        </p>
+        <img src="image/blog/blog1.jpg" alt="" />
+        <p>
+          Hi lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi,
+          temporibus voluptas eveniet ullam ab labore eius laudantium iusto quam
+          quibusdam tempore est ipsum corrupti excepturi. Nisi similique
+          expedita aliquid eligendi.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
+          doloribus incidunt impedit nesciunt voluptatibus molestias saepe iure
+          magnam tempora unde. Odit vel voluptate maiores, vitae exercitationem
+          tempora quas facilis tempore, ea quisquam dolores officia? Omnis,
+          temporibus minus aperiam ex dolore, libero impedit voluptate, ab alias
+          aliquid optio reprehenderit. Ab maiores tenetur officia vitae, quam
+          dolorem doloribus aliquid quas! Laborum, deserunt.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum voluptas
+          at minima facere nihil quas dolorum nesciunt magnam, doloribus
+          tempore, nobis, itaque voluptatem odio soluta rem fugiat non libero
+          similique eveniet! Ut rerum quas sed dignissimos placeat doloribus
+          nemo ducimus illum ipsa, asperiores pariatur nisi aperiam, inventore
+          quis, corporis ea.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="https://twitter.com/shauntriescode" target="_blank"
+          ><i class="fab fa-x-twitter fa-2x"></i
+        ></a>
+        <a href="https://github.com/shauntriescode" target="_blank"
+          ><i class="fab fa-github fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2024 - EdgeLedger</p>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
